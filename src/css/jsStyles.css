@@ -1,0 +1,100 @@
+.autocomplete-box {
+    position: absolute;
+    top: 36px;
+    left: 87px;
+    width: 279px;
+    color: #a4a4a4;
+    background-color: #ffffff;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.user-input {
+    color: #222222;
+}
+
+.autocomplete-box:hover {
+    cursor: default;
+}
+
+.autocomplete-box__item {
+    padding-left: 16px;
+    transition: background-color 0.25s linear;
+}
+
+.autocomplete-box__item:hover {
+    background-color: #f5f3f3;
+}
+
+.empty-cart-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.error-block {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.slider-widget {
+    height: 6px;
+}
+
+/*Фон слайдера*/
+#price-range-widget {
+    width: 262px;
+    height: 6px;
+    background-color: #f0f0f0;
+    position:relative;
+    margin:0;
+    padding:0 10px;
+}
+
+/*Стиль кнопки слайдера*/
+.ui-slider .ui-slider-handle {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    position:absolute;
+    z-index:1;
+}
+.ui-slider .ui-state-default {
+    background: #f16d7f;
+    border: none;
+}
+
+.ui-slider .ui-state-default:focus {
+    outline: none;
+}
+/*Элемент div результата, в котором выводится значение слайдера*/
+#slider-result {
+    font-size:50px;
+    height:200px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    width:250px;
+    text-align:center;
+    text-shadow:0 1px 1px #000;
+    font-weight:700;
+    padding:20px 0;
+}
+
+/*Полоска заполнителя слайдера*/
+.ui-slider .ui-slider-range {
+    background: #f16d7f;
+    height:6px;
+    position:absolute;
+}
+
+a {
+    outline:none;
+    -moz-outline-style:none;
+}
+
+
+

@@ -1,0 +1,92 @@
+.btnlnk {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    &:active {
+        outline: none;
+        position: relative;
+        top: 2px;
+    }
+    &_view-all {
+        width: 150px;
+        height: 44px;
+        line-height: 44px;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ef5b70;
+        background-color: #ffffff;
+        color: #ef5b70;
+        font-size: 16px;
+        font-weight: 300;
+        transition: all 0.25s linear;
+        &:hover {
+            border-color: #f16d7f;
+            color: #f16d7f;
+            font-weight: 700;
+        }
+    }
+    &_cart {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #eaeaea;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        font-weight: 700;
+        transition-property: background-color, color, border;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+        &:hover {
+            color: #4a4a4a;
+        }
+        &_big {
+            font-size: 14px;
+            padding: 20px 38px;
+            line-height: 10px;
+            &:hover {
+                background-color: #e8e8e8;
+            }
+        }
+        &_little {
+            font-size: 11px;
+            padding: 12px 15px;
+            line-height: 9px;
+            &:hover {
+                background-color: #e8e8e8;
+            }
+        }
+        &_proceed {
+            background-color: #f16d7f;
+            font-size: 16px;
+            color: #ffffff;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            &:hover {
+                border: 1px solid #f16d7f;
+                background-color: #ffffff;
+                color: #f16d7f;
+            }
+        }
+        &_header {
+            line-height: 50px;
+            width: 100%;
+            margin-top: 10px;
+            &:hover {
+                color: #f16d7f;
+                border-color: #f16d7f;
+            }
+        }
+    }
+    &_checkout {
+        line-height: 48px;
+        min-width: 180px;
+        min-height: 48px;
+        &:hover {
+            background-color: #e8e8e8;
+        }
+    }
+}

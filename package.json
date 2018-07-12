@@ -1,0 +1,23 @@
+{
+  "name": "brand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "concurrently \"gulp watch\" \"json-server --watch db.json\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
+    "concurrently": "^3.6.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.5.0",
+    "gulp-minify-css": "^1.2.4"
+  },
+  "dependencies": {
+    "json-server": "^0.14.0"
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout page</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/jsStyles.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../js/Validator.js"></script>
+    <script src="../js/Cart.js"></script>
+    <script src="../js/Renderer.js"></script>
+    <script src="../js/Interface.js"></script>
+    <script src="../js/Autocomplete.js"></script>
+    <script src="../js/IndexApp.js" defer></script>
+</head>
+
+<body>
+    <header>
+    <div class="container header-flex">
+        <div class="header__left">
+            <a href="#" class="logotype"> <img src="../img/logo.png" alt="logo brand" class="logotype__img">
+                <span>BRAN<span class="bold-pink-letter">D</span></span>
+            </a>
+            <form action="" class="header-form">
+                <button class="browse-button" id="browse-button"><span>Browse</span><i class="fas fa-sort-down"></i></button>
+                <input type="text" placeholder="Search for item..." id="search-input" autocomplete="off">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+                <div class="autocomplete-box" id="autocomplete-box"></div>
+                <div class="browse-drop-down">
+                    <div class="browse-drop-down__item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Women</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Dresses</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Tops</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Sweaters/Knits</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Jackets/Coats</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Blazers</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Denim</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Legging</a></li>
+                        </ul>
+                    </div>
+                    <div class="browse-drop-down__item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Man</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Sweaters/Knits</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Jackets/Coats</a></li>
+                            <li class="mega-menu__li"><a href="#" class="mega-menu__link">Blazers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="header__right">
+            <a href="shopping_cart.html" class="header__right__cart-link">
+                <img src="../img/carth.svg" alt="user cart" class="cart-picture-link">
+            </a>
+            <a href="#" class="my-account-btnlnk"><span>My Account</span><i class="fas fa-sort-down"></i></a>
+            <div class="cart-box">
+                <div class="cart-box__items"></div>
+                <div class="cart-box__bottom">
+                    <div class="cart-box__bottom__total">
+                        <span>TOTAL</span>
+                        <span id="total-price">$0.00</span>
+                    </div>
+                    <a href="checkout.html" class="btnlnk btnlnk_cart btnlnk_cart_header">checkout</a>
+                    <a href="shopping_cart.html" class="btnlnk btnlnk_cart btnlnk_cart_header">go to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <nav class="container">
+        <ul class="margin-padding-null nav-ulist">
+            <li><a href="index.html" class="nav__item">Home</a></li>
+            <li><a href="product.html" class="nav__item">Man</a></li>
+            <li><a href="product.html" class="nav__item">Women</a>
+                <div class="mega-menu">
+                    <div class="mega-menu-item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Women</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Dresses</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Tops</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Sweaters/Knits</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Jackets/Coats</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Blazers</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Denim</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Legging</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Women</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Dresses</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Tops</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Women</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Dresses</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Tops</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu-item">
+                        <h4 class="mega-menu__h4 margin-padding-null">Women</h4>
+                        <ul class="mega-menu__ul margin-padding-null">
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Dresses</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Tops</a></li>
+                            <li class="mega-menu__li"><a href="product.html" class="mega-menu__link">Sweaters/Knits</a></li>
+                        </ul>
+                    </div>
+                    <div class="img-box"><img src="../img/mega-menu-img.jpg" alt="some dude"></div>
+                </div>
+            </li>
+            <li><a href="product.html" class="nav__item">Kids</a></li>
+            <li><a href="product.html" class="nav__item">Accoseriese</a></li>
+            <li><a href="product.html" class="nav__item">Featured</a></li>
+            <li><a href="product.html" class="nav__item">Hot Deals</a></li>
+        </ul>
+    </nav>
+    <nav class="breadcrumbs">
+        <div class="container breadcrumbs-flex">
+            <div class="breadcrumbs__left">
+                <h3 class="breadcrumbs-h3 margin-padding-null">New Arrivals</h3> </div>
+            <div class="breadcrumbs-right">
+                <ul class="breadcrumbs-ul margin-padding-null">
+                    <li class="breadcrumbs-li"><a href="index.html" class="breadcrumbs-link">Home</a></li>
+                    <li class="breadcrumbs-li"><a href="product.html" class="breadcrumbs-link breadcrumbs-link_pink">Men</a></li>
+                    <li class="breadcrumbs-li"><a href="product.html" class="breadcrumbs-link">New Arrivals</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="checkout-box">
+        <div class="container">
+            <details open class="checkout-box__details" id="shipping-details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">01. Shipping Adress</summary>
+                <div class="checkout-box__shipping-adress">
+                    <div class="checkout-box__shipping-adress__left">
+                        <h4 class="checkout-box__h checkout-box__h_h4">Check as a guest or register</h4>
+                        <p class="checkout-box__p">Register with us for future convenience</p>
+                        <label class="checkout-box__label">
+                            <input type="radio" name="user" value="guest">&emsp;checkout as guest</label>
+                        <label class="checkout-box__label">
+                            <input type="radio" name="user" value="register" checked >&emsp;register</label>
+                        <h4 class="checkout-box__h checkout-box__h_h4">register and save time!</h4>
+                        <p class="checkout-box__p"> Register with us for future convenience</p>
+                        <p class="checkout-box__p checkout-box__p_advantages"><i class="fas fa-angle-double-right"></i>Fast and easy checkout
+                            <br> <i class="fas fa-angle-double-right"></i>Easy access to your order history and status</p> <a href="#" class="btnlnk btnlnk_cart btnlnk_checkout">Continue</a> </div>
+                    <div class="checkout-box__shipping-adress__right">
+                        <h4 class="checkout-box__h checkout-box__h_h4">Already registed?</h4>
+                        <p class="checkout-box__p">Please log in below</p>
+                        <form action="" class="checkout-box__shipping-adress__form" id="checkout-form">
+                            <label> <span>EMAIL ADDRESS<span style="color: #ff0d0d; font-size: 17px;">*</span></span>
+                                <br>
+                                <input type="text" class="cart__payment-box__input checkout-box__shipping-adress__form__input" data-validation-rule="email" id="login-email-input"> </label>
+                            <br>
+                            <label> <span>PASSWORD<span style="color: #ff0d0d; font-size: 17px;">*</span></span>
+                                <br>
+                                <input type="password" class="cart__payment-box__input checkout-box__shipping-adress__form__input" data-validation-rule="password" id="login-password-input"> </label>
+                            <br>
+                            <span class="checkout-box__shipping-adress__form__red">* Required Fileds</span><br>
+                            <br>
+                            <input type="submit" class="btnlnk btnlnk_cart btnlnk_checkout" value="Log in" id="login-submit-input"> <a href="#" class="checkout-box__shipping-adress__form__link"> Forgot Password ?</a> </form>
+                    </div>
+                </div>
+            </details>
+            <details class="checkout-box__details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">02.   BILLING INFORMATION</summary>
+            </details>
+            <details class="checkout-box__details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">03.   SHIPPING INFORMATION</summary>
+            </details>
+            <details class="checkout-box__details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">04.   SHIPPING METHOD</summary>
+            </details>
+            <details class="checkout-box__details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">05.   PAYMENT METHOD</summary>
+            </details>
+            <details class="checkout-box__details">
+                <summary class="checkout-box__h checkout-box__h_h2 checkout-box__summary">06.   ORDER REVIEW</summary>
+            </details>
+        </div>
+    </section>
+    <div class="subscribe-box subscribe-box_product">
+        <div class="container subscribe-box_flex">
+            <div class="subscribe-box__left">
+                <div class="subscribe-box__slider-item"><img src="../img/photo.png" alt="bin burhan"
+                                                             class="sbox__slider-item-img">
+                    <div class="sbox__text-box">
+                        <p class="sboxl__text-box__paragraph">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                            pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p> <span
+                            class="name">Bin Burhan</span>
+                        <br> <span class="city">Dhaka, Bd</span>
+                        <div class="pagination">
+                            <ul class="pagination-ul margin-padding-null">
+                                <li>
+                                    <a href="#" class="pagination__item"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__item pagination__item_active"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__item"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe-box__right">
+                <div class="sboxr__content">
+                    <p class="sboxr__paragraph"><span class="big">Subscribe</span>
+                        <br> FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form action="" id="email-form">
+                        <input type="text" placeholder="Enter Your Email" class="subscr-email-input"
+                               name="email" autocomplete="off" data-validation-rule="email">
+                        <button type="submit" class="subscr-btn" id="subscr-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="informaition-box container">
+        <div class="informaition-box__left">
+            <a href="#" class="logotype"> <img src="../img/logo.png" alt="logo brand" class="logotype__img"> <span>BRAN<span class="bold-pink-letter">D</span></span>
+            </a>
+            <p class="informaition-box-paragraph">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                <br>
+                <br> Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+        </div>
+        <div class="informaition-box__right">
+            <div class="iboxr__column">
+                <h4 class="iboxr__column-h4 margin-padding-null">COMPANY</h4>
+                <ul class="iboxr__column-ul margin-padding-null">
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Home</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Shop</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">About</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">How It Works</a></li>
+                    <li><a href="#" class="iboxr__item-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="iboxr__column">
+                <h4 class="iboxr__column-h4 margin-padding-null">COMPANY</h4>
+                <ul class="iboxr__column-ul margin-padding-null">
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Home</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Shop</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">About</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">How It Works</a></li>
+                    <li><a href="#" class="iboxr__item-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="iboxr__column">
+                <h4 class="iboxr__column-h4 margin-padding-null">COMPANY</h4>
+                <ul class="iboxr__column-ul margin-padding-null">
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Home</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">Shop</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">About</a></li>
+                    <li class="iboxr__item"><a href="#" class="iboxr__item-link">How It Works</a></li>
+                    <li><a href="#" class="iboxr__item-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="footer__text">
+                <p class="margin-padding-null">&copy; 2017 Brand All Rights Reserved.</p>
+            </div>
+            <div class="social-links-box"> <a href="#" class="social-links__item"><i class="fab fa-facebook-f"></i></a> <a href="#" class="social-links__item"><i class="fab fa-twitter"></i></a> <a href="#" class="social-links__item"><i class="fab fa-linkedin-in"></i></a> <a href="#" class="social-links__item"><i class="fab fa-pinterest-p"></i></a> <a href="#" class="social-links__item"><i class="fab fa-google-plus-g"></i></a> </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
